@@ -1,0 +1,9 @@
+.createMessage {
+  /* border: 2px solid rgb(227, 25, 25); */
+  background-color: green;
+  height: 100vh;
+  max-width: 500px;
+  /* margin: 10px; */
+  min-width: 700px;
+  padding: 10px;
+}
