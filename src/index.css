@@ -2,11 +2,11 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  background-color: #19274a;
 }
 body {
   height: 100vh;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  background-color: #19274a;
 }

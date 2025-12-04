@@ -28,7 +28,7 @@ const CreateMessage = ({ handleSendMessage }) => {
     }
   };
   return (
-    <section className="createMessage">
+    <section className="createMessage" data-testid="createMessage">
       <textarea
         name=""
         id=""

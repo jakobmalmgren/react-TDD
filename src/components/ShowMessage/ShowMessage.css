@@ -1,5 +1,11 @@
 .showMessage {
   background-color: grey;
-  height: 500px;
-  width: 600px;
+  height: 100vh;
+  max-width: 500px;
+  margin: auto;
+}
+.aa {
+  height: 600px;
+  width: 100%;
+  background-color: red;
 }

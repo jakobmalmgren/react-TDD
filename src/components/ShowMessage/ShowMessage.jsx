@@ -2,10 +2,8 @@ import React from "react";
 import "./ShowMessage.css";
 
 const ShowMessage = ({ messages = [] }) => {
-  console.log("hmm", messages);
-
   return (
-    <div className="showMessage">
+    <div className="showMessage" data-testid="showMessage">
       {messages.length === 0 && <p>there are no messages</p>}
 
       {messages.map((msg, index) => (
@@ -15,6 +13,10 @@ const ShowMessage = ({ messages = [] }) => {
           <p>{msg.author}</p>
         </section>
       ))}
+      <div className="aa"></div>
+      <div className="aa"></div>
+      <div className="aa"></div>
+      <div className="aa"></div>
     </div>
   );
 };
