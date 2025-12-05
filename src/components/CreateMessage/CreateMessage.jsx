@@ -2,6 +2,7 @@ import React from "react";
 import "./CreateMessage.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CreateMessage = ({ handleSendMessage }) => {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ const CreateMessage = ({ handleSendMessage }) => {
         onChange={(e) => setData({ ...data, author: e.target.value })}
       />
       <button onClick={handleClick}>Publicera</button>
+      <Link to="/showmessage">gå till meddelanden</Link>
       {error && <p>{error}</p>}
     </section>
   );

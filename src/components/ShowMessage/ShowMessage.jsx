@@ -1,5 +1,7 @@
 import React from "react";
+import { FaPen } from "react-icons/fa";
 import "./ShowMessage.css";
+import { Link } from "react-router-dom";
 
 const ShowMessage = ({ messages = [] }) => {
   return (
@@ -13,10 +15,29 @@ const ShowMessage = ({ messages = [] }) => {
           <p>{msg.author}</p>
         </section>
       ))}
-      <div className="aa"></div>
-      <div className="aa"></div>
-      <div className="aa"></div>
-      <div className="aa"></div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+      <div className="aa">aa</div>
+
+      <Link to="/" className="link" aria-label="visa create messages">
+        <FaPen></FaPen>
+      </Link>
     </div>
   );
 };

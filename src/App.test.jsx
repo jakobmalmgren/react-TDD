@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
 import App from "./App";
+import { MemoryRouter } from "react-router-dom";
 
 describe("App", () => {
   it("should navigate from create message TO show message compontent", async () => {
@@ -10,6 +11,7 @@ describe("App", () => {
         <App />
       </MemoryRouter>
     );
+
     const link = screen.getByRole("link", { name: "gå till meddelanden" });
     await userEvent.click(link);
 
@@ -48,8 +50,8 @@ describe("App", () => {
         <App />
       </MemoryRouter>
     );
-    const buttonToShowMessages = screen.getByRole("button", {
-      name: /to all messages/i,
+    const buttonToShowMessages = screen.getByRole("link", {
+      name: /gå till meddelanden/i,
     });
 
     await userEvent.click(buttonToShowMessages);

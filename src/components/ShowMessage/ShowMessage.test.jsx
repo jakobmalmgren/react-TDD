@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import ShowMessage from "./ShowMessage";
+import { MemoryRouter } from "react-router-dom";
 
 describe("ShowMessage", () => {
   it("should show all the messages", () => {
@@ -12,7 +13,11 @@ describe("ShowMessage", () => {
         author: "jakob",
       },
     ];
-    render(<ShowMessage messages={messages} />);
+    render(
+      <MemoryRouter>
+        <ShowMessage messages={messages} />
+      </MemoryRouter>
+    );
 
     //act
     const dateEl = screen.getByText("3 Nov, 09:23");
@@ -38,7 +43,11 @@ describe("ShowMessage", () => {
         author: "jakob1",
       },
     ];
-    render(<ShowMessage messages={messages} />);
+    render(
+      <MemoryRouter>
+        <ShowMessage messages={messages} />
+      </MemoryRouter>
+    );
     //act
     const displayMessages = screen.getAllByTestId("message-item");
     //assert
@@ -48,7 +57,11 @@ describe("ShowMessage", () => {
   it("should say no messages if there are no messages", () => {
     // arrange
     const messages = [];
-    render(<ShowMessage messages={messages} />);
+    render(
+      <MemoryRouter>
+        <ShowMessage messages={messages} />
+      </MemoryRouter>
+    );
 
     //act
     const messagesEl = screen.queryAllByTestId("message-item");

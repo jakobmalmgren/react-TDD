@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import CreateMessage from "./components/CreateMessage/CreateMessage";
 import ShowMessage from "./components/ShowMessage/ShowMessage";
 import { useState } from "react";
@@ -12,23 +12,21 @@ function App() {
   };
 
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <CreateMessage handleSendMessage={handleSendMessage} />
-            </>
-          }
-        />
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <CreateMessage handleSendMessage={handleSendMessage} />
+          </>
+        }
+      />
 
-        <Route
-          path="/showmessage"
-          element={<ShowMessage messages={messages} />}
-        />
-      </Routes>
-    </Router>
+      <Route
+        path="/showmessage"
+        element={<ShowMessage messages={messages} />}
+      />
+    </Routes>
   );
 }
 
